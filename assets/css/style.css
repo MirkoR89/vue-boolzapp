@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Background */
 .nav_bg {
   height: 80px;
@@ -11,27 +15,21 @@
 
 /* Container Application  */
 #app {
-  height: 600px;
-  border: 2px solid red;
+  height: 650px;
   margin-top: 25px;
 }
 
 /* Contact List  */
 .contact_list {
-  
-  border: 2px solid red;
-}
-
-.messages_area {
-  height: 500px;
-  border: 2px solid red;
+  padding: 0!important;
+  height: 650px;
 }
 
 /* User details */
 .user_details {
   background-color: #EAEAEA;
-  height: 10%;
-  border: 2px solid red;
+  height: 12%;
+  width: 100%;
 }
 
 .user_details img {
@@ -39,15 +37,76 @@
   border-radius: 50%;
 }
 
+.user_details span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.user_details i {
+ color: #B1B1B1;
+ font-size: 20px;
+}
+
 .notify_allert {
   height: 15%;
   background-color: #8DDAFC;
-  border: 2px solid red;
+}
+
+.notify_allert i {
+  font-size: 30px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 50%;
+  color: #8DDAFC;
+}
+
+.notify_allert span:first-child {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.notify_allert span:last-child {
+  font-size: 18px;
+  font-weight: 500;
+  color: #B1B1B1;
+  text-decoration: underline;
+}
+
+.search_bar {
+  height: 10%;
+  background-color: #FAFAFA;
+}
+
+.search_bar i {
+  font-size: 20px;
+  color: lightgrey;
+}
+
+.search_bar input {
+  height: 73%;
+  width: 85%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
 }
 
 .messages_list {
-  height: 75%;
-  border: 2px solid red;
+  height: 58%;
+  background-color: white;
+}
+
+.contact {
+  border-bottom: 1px solid lightgrey;
+}
+
+.contact img {
+  width: 15%;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.contact span {
+  font-size: 18px;
 }
 
 /* Messages Area */
