@@ -1,15 +1,53 @@
+/* Background */
 .nav_bg {
-  height: 100px;
+  height: 80px;
   background-color: #009788;
 }
 
 .bg {
-  height: 800px;
+  height: 100vh;
   background-color: #DADBD5;
 }
 
+/* Container Application  */
 #app {
-  height: 700px;
-  border: 2px solid blue;
-  margin-top: 50px;
+  height: 600px;
+  border: 2px solid red;
+  margin-top: 25px;
 }
+
+/* Contact List  */
+.contact_list {
+  
+  border: 2px solid red;
+}
+
+.messages_area {
+  height: 500px;
+  border: 2px solid red;
+}
+
+/* User details */
+.user_details {
+  background-color: #EAEAEA;
+  height: 10%;
+  border: 2px solid red;
+}
+
+.user_details img {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.notify_allert {
+  height: 15%;
+  background-color: #8DDAFC;
+  border: 2px solid red;
+}
+
+.messages_list {
+  height: 75%;
+  border: 2px solid red;
+}
+
+/* Messages Area */
