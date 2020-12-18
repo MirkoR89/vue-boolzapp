@@ -1,0 +1,15 @@
+.nav_bg {
+  height: 100px;
+  background-color: #009788;
+}
+
+.bg {
+  height: 800px;
+  background-color: #DADBD5;
+}
+
+#app {
+  height: 700px;
+  border: 2px solid blue;
+  margin-top: 50px;
+}
