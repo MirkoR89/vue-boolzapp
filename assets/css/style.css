@@ -1,5 +1,17 @@
+/* Utility classes */
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 65px;
+  border-radius: 50%;
+}
+
+i {
+  color: #B1B1B1;
+  font-size: 20px;
 }
 
 /* Background */
@@ -20,7 +32,8 @@ body {
 }
 
 /* Contact List  */
-.contact_list {
+.contact_list,
+.messages_area {
   padding: 0!important;
   height: 650px;
 }
@@ -29,22 +42,11 @@ body {
 .user_details {
   background-color: #EAEAEA;
   height: 12%;
-  width: 100%;
-}
-
-.user_details img {
-  width: 15%;
-  border-radius: 50%;
 }
 
 .user_details span {
   font-size: 20px;
   font-weight: 500;
-}
-
-.user_details i {
- color: #B1B1B1;
- font-size: 20px;
 }
 
 .notify_allert {
@@ -100,8 +102,6 @@ body {
 }
 
 .contact img {
-  width: 15%;
-  border-radius: 50%;
   margin: 10px;
 }
 
@@ -110,3 +110,20 @@ body {
 }
 
 /* Messages Area */
+
+.messages_area {
+  border: 1px solid red;
+  height: 12%;
+  background-color: #EAEAEA;
+}
+
+.chat_area {
+  background-image: url("../img/mine.jpg");
+  border: 1px solid red;
+  height: 73%;
+}
+
+.text_area {
+  border: 1px solid red;
+  height: 15%;
+}
