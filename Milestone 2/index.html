@@ -54,7 +54,7 @@
               <div class="contacts_list d-flex flex-column">
                 <div class="contact d-flex align-items-center" v-for="contact in contacts">
                   <img :src="'assets/img/avatar' + contact.avatar + '.jpg'">
-                  <img :src="assets/img/avatar' + contact.avatar + '.jpg" alt="avatar utente"> <span>{{contact.name}}</span>
+                  <span>{{contact.name}}</span>
                 </div>
               </div>
             </div>
@@ -76,7 +76,13 @@
 
               <!-- Chat Area -->
               <div class="chat_area">
-              
+                <div class="user_message d-flex justify-content-around align-items-center">
+                  <span>Hai portato a spasso il cane?</span>
+                </div>
+
+                <div class="contact_message d-flex justify-content-around align-items-center">
+                  <span>Tutto fatto</span>
+                </div>
               </div>
 
               <!-- Text Area -->
