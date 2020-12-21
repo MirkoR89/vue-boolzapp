@@ -52,7 +52,9 @@
 
               <!-- Contact list -->
               <div class="contacts_list d-flex flex-column">
-                <div class="contact d-flex align-items-center" v-for="contact in contacts" v-html="html" v-model="message1", "message2">
+                <div class="contact d-flex align-items-center" v-for="contact in contacts">
+                  <img :src="'assets/img/avatar' + contact.avatar + '.jpg'">
+                  <span>{{contact.name}}</span>
                 </div>
               </div>
             </div>

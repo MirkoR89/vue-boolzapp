@@ -80,9 +80,6 @@ let app = new Vue({
           }
         ],
       },
-    ],
-    html: '<img src="assets/img/avatar_{{message1}}.jpg" alt="avatar utente"> <span>{{message2}}</span>',
-    message1: "contacts.avatar",
-    message2: "contacts.name",
+    ]
   }
 })
