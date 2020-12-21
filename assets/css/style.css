@@ -12,7 +12,7 @@ img {
 i {
   color: #B1B1B1;
   font-size: 25px;
-  padding: 10px;
+  margin: 10px;
 }
 
 /* Background */
@@ -43,11 +43,22 @@ i {
 .user_details {
   background-color: #EAEAEA;
   height: 12%;
+  border-right: 1px solid #BBB;
 }
 
 .user_details span {
   font-size: 20px;
   font-weight: 500;
+}
+
+.user_info,
+.user_tools {
+  height: 100%;
+  width: 50%;
+}
+
+.user_tools {
+  margin-right: 15px;
 }
 
 /* Notify Allert */
@@ -65,15 +76,15 @@ i {
 }
 
 .notify_allert span:first-child {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
-  padding-right: 15px;
+  padding-right: 5px;
 }
 
 .notify_allert span:last-child {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
-  color: #B1B1B1;
+  color: grey;
   text-decoration: underline;
 }
 
@@ -94,12 +105,14 @@ i {
   border: none;
   border-radius: 5px;
   outline: none;
+  margin-right: 15px;
 }
 
 /* Contact List */
 .contacts_list {
   height: 63%;
   background-color: white;
+  overflow-y: scroll;
 }
 
 .contact {
@@ -120,9 +133,26 @@ i {
   background-color: #EAEAEA;
 }
 
+.contact_tools,
+.info_contact {
+  height: 100%;
+  width: 50%;
+}
+
+.contact_tools {
+  margin-right: 25px;
+}
+
+.info_contact span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Chat Area */
 .chat_area {
   background-image: url("../img/mine.jpg");
   height: 76%;
+  overflow-y: scroll;
 }
 
 /* Text Area */
@@ -137,4 +167,13 @@ i {
   border: none;
   border-radius: 5px;
   outline: none;
+  margin-right: 15px;
+}
+
+.text_area i {
+  color: grey
+}
+
+.text_area i:last-child {
+  margin-right: 25px;
 }
