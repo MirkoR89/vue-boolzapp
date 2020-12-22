@@ -85,8 +85,9 @@ let app = new Vue({
     activeCont: 0
   },
   methods: {
-    showConv() {
-      this.activeCont++;
+    //Funzione che permette il cambio di conversazione
+    showConv(index) {
+      this.activeCont = index;
     }
   }
 })

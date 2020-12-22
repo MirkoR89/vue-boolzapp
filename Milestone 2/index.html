@@ -54,7 +54,7 @@
 
               <!-- Contact list -->
               <div class="contacts_list d-flex flex-column">
-                <div class="contact d-flex align-items-center" v-for="contact in contacts" @click="showConv" >
+                <div class="contact d-flex align-items-center" v-for="contact, index in contacts" @click="showConv(index)">
                   <img :src="'assets/img/avatar' + contact.avatar + '.jpg'">
                   <span>{{contact.name}}</span>
                 </div>
@@ -65,8 +65,8 @@
             <div class="col-8 messages_area">
               <div class="info_chat d-flex justify-content-around align-items-center">
                 <div class="info_contact d-flex justify-content-start align-items-center">
-                  <img src="assets/img/avatar_1.jpg" alt="avatar utente">
-                  <span>Michele</span>
+                  <img :src="'assets/img/avatar' + contacts[activeCont].avatar + '.jpg'">
+                  <span>{{contacts[activeCont].name}}</span>
                   <span></span>
                 </div>
                 <div class="contact_tools d-flex justify-content-end align-items-center">
@@ -78,8 +78,8 @@
 
               <!-- Chat Area -->
               <div class="bg_chat_area">
-                <div class="chat_area d-flex" v-for="message in contacts[activeCont].messages" :class="message.status == 'sent' ? 'user_message' : 'contact_message'">
-                  <div class="text">
+                <div class="chat_area" v-for="message in contacts[activeCont].messages">
+                  <div class="text d-flex flex-wrap" :class="message.status == 'sent' ? 'user_message' : 'contact_message'">
                     <span>{{message.text}}</span>
                     <span>{{message.date}}</span>
                   </div>
