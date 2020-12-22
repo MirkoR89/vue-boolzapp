@@ -51,7 +51,7 @@
               </div>
 
               <!-- Contact list -->
-              <div class="contacts_list d-flex flex-column">
+              <div class="contacts_list d-flex flex-column" @click="showConv">
                 <div class="contact d-flex align-items-center" v-for="contact in contacts">
                   <img :src="'assets/img/avatar' + contact.avatar + '.jpg'">
                   <span>{{contact.name}}</span>
@@ -75,13 +75,17 @@
               </div>
 
               <!-- Chat Area -->
-              <div class="chat_area">
-                <div class="user_message d-flex justify-content-around align-items-center">
-                  <span>Hai portato a spasso il cane?</span>
+              <div class="row chat_area">
+                <div class="col-6">
+                  <div class="user_message d-flex align-items-center" v-for="message in contacts">
+                    <span>{{message.messages.text}}</span>
+                  </div>
                 </div>
 
-                <div class="contact_message d-flex justify-content-around align-items-center">
-                  <span>Tutto fatto</span>
+                <div class="col-6">
+                  <div class="contact_message d-flex align-items-center" v-for="message in contacts">
+                    <span>{{}}</span>
+                  </div>
                 </div>
               </div>
 
