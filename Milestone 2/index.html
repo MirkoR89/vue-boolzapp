@@ -76,18 +76,10 @@
 
               <!-- Chat Area -->
               <div class="row chat_area">
-                <div class="col-6">
-                  <div class="user_message d-flex align-items-center" v-for="message in contacts">
-                    <span>{{message.messages.text}}</span>
-                  </div>
+                <div class="d-flex align-items-center" v-for="message in contacts[activeCont].messages" :class="message.status == 'sent' ? 'user_message' : 'contact_message'">
+                  <span>{{message.text}}</span>
+                  <span>{{message.date}}</span>
                 </div>
-
-                <div class="col-6">
-                  <div class="contact_message d-flex align-items-center" v-for="message in contacts">
-                    <span>{{}}</span>
-                  </div>
-                </div>
-              </div>
 
               <!-- Text Area -->
               <div class="text_area d-flex justify-content-around align-items-center">

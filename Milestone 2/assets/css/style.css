@@ -156,10 +156,10 @@ i {
   margin: 0!important;
 }
 
-.user_message,
-.contact_message {
+.user_message {
+  display: flex;
   background-color: #D5F9BB;
-  width: 80%;
+  width: 40%;
   height: 12%;
   margin: 12% auto;
   border-radius: 10px;
@@ -167,12 +167,22 @@ i {
 }
 
 .contact_message {
+  display: flex;
+  justify-content: flex-end;
   background-color: white;
+  width: 40%;
+  height: 12%;
+  margin: 12% auto;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
-.user_message span,
-.contact_message span {
-  margin-left: 20px;
+.chat_area span {
+  margin-left: 18px;
+}
+
+.chat_area span:last-child {
+  font-size: 11px;
 }
 
 /* Text Area */
