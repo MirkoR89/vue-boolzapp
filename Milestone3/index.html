@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boolzapp</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/8d58ee31c8.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Background app -->
+  <div class="container-fluid bg">
+    <div class="row">
+      <div class="col-12 nav_bg">
+
+        <!-- Container Application -->
+        <div class="container" id="app">
+          <div class="row">
+            <!-- Container user area -->
+            <div class="col-4 user_area d-flex flex-column">
+              <!-- User details -->
+              <div class="user_details d-flex justify-content-around align-items-center">
+                <div class="user_info d-flex justify-content-start align-items-center">
+                  <img src="assets/img/avatar_io.jpg" alt="avatar utente">
+                  <span>Mirko Rinelli</span>
+                </div>
+                <div class="user_tools d-flex justify-content-end align-items-center">
+                  <i class="fas fa-circle-notch"></i>
+                  <i class="fas fa-comment-alt"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+                </div>
+              </div>
+
+              <!-- Notify allert  -->
+              <div class="notify_allert d-flex justify-content-around align-items-center">
+                <i class="fas fa-bell-slash"></i>
+                <div class="d-flex flex-column justify-content-start">
+                  <span>Ricevi nothifiche di nuovi messaggi</span>
+                  <span>Attiva notifiche desktop</span>
+                </div>
+              </div>
+
+              <!-- Seacr bar -->
+              <div class="search_bar d-flex justify-content-around align-items-center">
+                <i class="fas fa-search"></i>
+                <input type="search" name="" value="" placeholder="Cerca o inizia una nuova chat">
+              </div>
+
+              <!-- Contact list -->
+              <div class="contacts_list d-flex flex-column">
+                <div class="contact d-flex align-items-center" v-for="contact, index in contacts" @click="showConv(index)">
+                  <img :src="'assets/img/avatar' + contact.avatar + '.jpg'">
+                  <span>{{contact.name}}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="col-8 messages_area">
+              <div class="info_chat d-flex justify-content-around align-items-center">
+                <div class="info_contact d-flex justify-content-start align-items-center">
+                  <img :src="'assets/img/avatar' + contacts[activeCont].avatar + '.jpg'">
+                  <span>{{contacts[activeCont].name}}</span>
+                  <span></span>
+                </div>
+                <div class="contact_tools d-flex justify-content-end align-items-center">
+                  <i class="fas fa-search"></i>
+                  <i class="fas fa-paperclip"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+                </div>
+              </div>
+
+              <!-- Chat Area -->
+              <div class="bg_chat_area">
+                <div class="chat_area" v-for="message in contacts[activeCont].messages">
+                  <div class="text d-flex flex-wrap" :class="message.status == 'sent' ? 'user_message' : 'contact_message'">
+                    <span>{{message.text}}</span>
+                    <span>{{message.date}}</span>
+                  </div>
+                </div>
+              </div>
+
+                <!-- Text Area -->
+              <div class="text_area d-flex justify-content-around align-items-center">
+                <i class="far fa-smile"></i>
+                <input type="text"  placeholder="Scrivi un messaggio" v-model="message" @keyup.enter="sendMsg">
+                <i class="fas fa-microphone"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="assets/js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

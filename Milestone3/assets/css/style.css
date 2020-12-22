@@ -1,0 +1,209 @@
+/* Utility classes */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 65px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+i {
+  color: #B1B1B1;
+  font-size: 25px;
+  margin: 10px;
+}
+
+/* Background */
+.nav_bg {
+  height: 103px;
+  background-color: #009788;
+}
+
+.bg {
+  height: 100vh;
+  background-color: #DADBD5;
+}
+
+/* Container Application  */
+#app {
+  height: 650px;
+  margin-top: 25px;
+}
+
+/* Container User Area  */
+.user_area,
+.messages_area {
+  padding: 0!important;
+  height: 650px;
+}
+
+/* User Details */
+.user_details {
+  background-color: #EAEAEA;
+  height: 12%;
+  border-right: 1px solid #BBB;
+}
+
+.user_details span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.user_info,
+.user_tools {
+  height: 100%;
+  width: 50%;
+}
+
+.user_tools {
+  margin-right: 15px;
+}
+
+/* Notify Allert */
+.notify_allert {
+  height: 15%;
+  background-color: #8DDAFC;
+}
+
+.notify_allert i {
+  font-size: 30px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 50%;
+  color: #8DDAFC;
+}
+
+.notify_allert span:first-child {
+  font-size: 17px;
+  font-weight: 500;
+  padding-right: 5px;
+}
+
+.notify_allert span:last-child {
+  font-size: 17px;
+  font-weight: 500;
+  color: grey;
+  text-decoration: underline;
+}
+
+/* Seacr-bar */
+.search_bar {
+  height: 10%;
+  background-color: #F3EEEA;
+}
+
+.search_bar i {
+  font-size: 20px;
+  color: lightgrey;
+}
+
+.search_bar input {
+  height: 73%;
+  width: 85%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 15px;
+}
+
+/* Contact List */
+.contacts_list {
+  height: 63%;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.contact {
+  border-bottom: 1px solid lightgrey;
+}
+
+.contact img {
+  margin: 10px;
+}
+
+.contact span {
+  font-size: 18px;
+}
+
+/* Messages Area */
+.info_chat {
+  height: 12%;
+  background-color: #EAEAEA;
+}
+
+.contact_tools,
+.info_contact {
+  height: 100%;
+  width: 50%;
+}
+
+.contact_tools {
+  margin-right: 25px;
+}
+
+.info_contact span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Chat Area */
+.bg_chat_area {
+  background-image: url("../img/mine.jpg");
+  height: 76%;
+  overflow-y: scroll;
+}
+
+.text {
+  width: 250px;
+  height: 80px;
+  margin: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.user_message {
+  background-color: #D5F9BB;
+}
+
+.contact_message {
+  margin-left: auto;
+  background-color: white;
+}
+
+
+.chat_area span {
+  margin-left: 18px;
+}
+
+.chat_area span:last-child {
+  margin: auto 5px 5px auto;
+  color: grey;
+
+  font-size: 11px;
+}
+
+/* Text Area */
+.text_area {
+  height: 12%;
+  background-color: #F3EEEA;
+}
+
+.text_area input {
+  height: 70%;
+  width: 85%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 15px;
+}
+
+.text_area i {
+  color: grey
+}
+
+.text_area i:last-child {
+  margin-right: 25px;
+}
