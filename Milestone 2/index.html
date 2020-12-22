@@ -54,7 +54,7 @@
 
               <!-- Contact list -->
               <div class="contacts_list d-flex flex-column">
-                <div class="contact d-flex align-items-center" v-for="contact in contacts">
+                <div class="contact d-flex align-items-center" v-for="contact in contacts" @click="showConv" >
                   <img :src="'assets/img/avatar' + contact.avatar + '.jpg'">
                   <span>{{contact.name}}</span>
                 </div>

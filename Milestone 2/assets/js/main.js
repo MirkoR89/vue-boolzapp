@@ -83,5 +83,10 @@ let app = new Vue({
     ],
     // Proprietà utilizzata per cambiare ciò che mostra il contatto selezionato.
     activeCont: 0
+  },
+  methods: {
+    showConv() {
+      this.activeCont++;
+    }
   }
 })
