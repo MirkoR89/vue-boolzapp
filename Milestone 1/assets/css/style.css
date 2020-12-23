@@ -1,6 +1,7 @@
 /* Utility classes */
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 img {
@@ -28,6 +29,7 @@ i {
 
 /* Container Application  */
 #app {
+  min-width: 1000px;
   height: 650px;
   margin-top: 25px;
 }

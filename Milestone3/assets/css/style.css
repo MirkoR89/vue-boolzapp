@@ -1,6 +1,7 @@
 /* Utility classes */
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 img {
@@ -28,6 +29,7 @@ i {
 
 /* Container Application  */
 #app {
+  min-width: 1000px;
   height: 650px;
   margin-top: 25px;
 }
@@ -119,6 +121,11 @@ i {
   border-bottom: 1px solid lightgrey;
 }
 
+.contact:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .contact img {
   margin: 10px;
 }
@@ -152,7 +159,7 @@ i {
 .bg_chat_area {
   background-image: url("../img/mine.jpg");
   height: 76%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .text {

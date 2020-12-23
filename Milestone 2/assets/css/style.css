@@ -1,6 +1,7 @@
 /* Utility classes */
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 img {
@@ -28,6 +29,7 @@ i {
 
 /* Container Application  */
 #app {
+  min-width: 1000px;
   height: 650px;
   margin-top: 25px;
 }
@@ -110,13 +112,18 @@ i {
 
 /* Contact List */
 .contacts_list {
-  height: 63%;
+  height: 53%;
   background-color: white;
   overflow-y: scroll;
 }
 
 .contact {
   border-bottom: 1px solid lightgrey;
+}
+
+.contact:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .contact img {
@@ -151,7 +158,7 @@ i {
 /* Chat Area */
 .bg_chat_area {
   background-image: url("../img/mine.jpg");
-  height: 76%;
+  height: 66%;
   overflow-y: scroll;
 }
 
@@ -181,7 +188,6 @@ i {
 .chat_area span:last-child {
   margin: auto 5px 5px auto;
   color: grey;
-
   font-size: 11px;
 }
 
