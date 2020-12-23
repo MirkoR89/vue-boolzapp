@@ -1,5 +1,5 @@
 let app = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
     contacts: [{
         name: 'Michele',
@@ -82,15 +82,31 @@ let app = new Vue({
       },
     ],
     // Proprietà utilizzata per cambiare ciò che mostra il contatto selezionato.
-    activeCont: 0
+    activeCont: 0,
+    //
+    newMessage: ''
   },
   methods: {
     //Funzione che permette il cambio di conversazione
     showConv(index) {
       this.activeCont = index;
     },
+    //Funzione che permette l'invio di nuovi messaggi
     sendMsg() {
-      console.log(this.message);  
+      this.contacts[this.activeCont].messages.push({
+        date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
+        text: this.newMessage,
+        status: 'sent'
+      });
+      this.newMessage = '';
+
+      setTimeout(() => {
+        this.contacts[this.activeCont].messages.push({
+          date: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+          text: 'ok!',
+          status: 'received',
+        });
+      }, 1000);
     }
   }
 })
