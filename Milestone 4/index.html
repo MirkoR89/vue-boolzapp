@@ -77,7 +77,7 @@
               </div>
 
               <!-- Chat Area -->
-              <div class="bg_chat_area">
+              <div class="bg_chat_area" ref="scrollArea">
                 <div class="chat_area" v-for="message in contacts[activeCont].messages">
                   <div class="text d-flex flex-wrap" :class="message.status == 'sent' ? 'user_message' : 'contact_message'">
                     <span>{{message.text}}</span>

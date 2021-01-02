@@ -102,6 +102,7 @@ let app = new Vue({
       });
       this.newMessage = '';
 
+      // Funzione che permette l'aggiunta di un ok automatico
       setTimeout(() => {
         this.contacts[this.activeCont].messages.push({
           date: dayjs().format('YYYY-MM-DD HH:mm:ss'),
@@ -109,6 +110,12 @@ let app = new Vue({
           status: 'received',
         });
       }, 1000);
+    },
+    // Funzione che permette lo scroll automatico verso il fondo dell'area chat quando viene aggiunto un nuovo messaggio
+    scrollToEnd() {
+      let container = this.$refs.scrollArea;
+      let containerScroll = container.scrollHeight;
+      container.scrollTop = containerScroll;
     }
   },
   computed: {
@@ -118,5 +125,12 @@ let app = new Vue({
         return contactFilter.name.toLowerCase().includes(this.search.toLowerCase());
       });
     }
+  },
+  // Mounted e updated vengo utilizzati per eseguire un nuovo aggiornamento ogni volta che la pagina subisce un evento.
+  mounted() {
+    this.scrollToEnd();
+  },
+  updated() {
+    this.scrollToEnd();
   }
-})
+});
