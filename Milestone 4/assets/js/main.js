@@ -118,7 +118,7 @@ let app = new Vue({
       container.scrollTop = containerScroll;
     }
   },
-  computed: {
+  computed:{
     // Funzione per filtrare i messaggi nella search bar
     filteredContact() {
       return this.contacts.filter(contactFilter => {

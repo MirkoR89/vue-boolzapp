@@ -24,6 +24,8 @@ i {
 
 .bg {
   height: 100vh;
+  min-width: 1000px;
+  min-height: 1000px;
   background-color: #DADBD5;
 }
 
